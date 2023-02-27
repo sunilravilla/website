@@ -1,0 +1,96 @@
+// Variables for light theme
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$background-color: #f8f9fa;
+$text-color: #212529;
+
+// Variables for dark theme
+$primary-color-dark: #8a98ff;
+$secondary-color-dark: #adb5bd;
+$background-color-dark: #212529;
+$text-color-dark: #f8f9fa;
+
+// Header styles
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+	background-color: $background-color;
+	color: $text-color;
+	transition: all 0.3s;
+
+	// Dark theme styles
+	&.dark {
+		background-color: $background-color-dark;
+		color: $text-color-dark;
+	}
+
+	.logodiv {
+		.logo {
+			height: 50px;
+			width: auto;
+		}
+	}
+
+	.nav {
+		ul {
+			display: flex;
+			list-style-type: none;
+
+			li {
+				margin-right: 20px;
+
+				a {
+					color: $primary-color;
+					text-decoration: none;
+
+					&:hover {
+						color: $secondary-color;
+					}
+				}
+			}
+		}
+	}
+
+	// Media queries for mobile devices
+	@media (max-width: 767px) {
+		flex-wrap: wrap;
+		justify-content: center;
+		padding: 10px;
+
+		.logodiv {
+			margin-bottom: 10px;
+		}
+
+		.nav {
+			width: 100%;
+
+			ul {
+				justify-content: center;
+
+				li {
+					margin-right: 10px;
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+}
+
+// Dark theme styles for header links
+.header.dark {
+	.nav {
+		ul {
+			li {
+				a {
+					color: $primary-color-dark;
+
+					&:hover {
+						color: $secondary-color-dark;
+					}
+				}
+			}
+		}
+	}
+}
