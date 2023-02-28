@@ -1,7 +1,7 @@
 // Variables for light theme
 $primary-color: #007bff;
 $secondary-color: #6c757d;
-$background-color: #f8f9fa;
+$background-color: #fff;
 $text-color: #212529;
 
 // Variables for dark theme
@@ -44,6 +44,12 @@ $text-color-dark: #f8f9fa;
 				a {
 					color: $primary-color;
 					text-decoration: none;
+					display: flex;
+					color: rgb(10, 18, 30, 0.75);
+					letter-spacing: 0.025em;
+					text-decoration: none;
+					padding: 0.75rem 1.5rem;
+					font-weight: 700;
 
 					&:hover {
 						color: $secondary-color;
