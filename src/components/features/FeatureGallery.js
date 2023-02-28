@@ -1,7 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import img1 from '../heroSection/jcb.png';
-import img2 from '../heroSection/agri.png';
-import img3 from '../heroSection/jcb1.png';
 import tipper from './tipper.png';
 import freight from './freight.png';
 import van from './van.png';
@@ -53,11 +50,6 @@ const TABS = [
 		secondColor: '18,23,26'
 	}
 ];
-const imagesMap = {
-	0: img1,
-	1: img2,
-	2: img3
-};
 
 export default function FeaturesGallery() {
 	const [currentTab, setCurrentTab] = useState(TABS[0]);
