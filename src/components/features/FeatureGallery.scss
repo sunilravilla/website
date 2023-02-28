@@ -117,11 +117,11 @@ $gray: #ddd;
 		}
 
 		.Tractor {
-			animation: zoomin 1s ease-in-out;
+			animation: move-right 3s infinite alternate ease-in-out;
 		}
 
 		.Truck {
-			animation: move-right 2s infinite alternate ease-in-out;
+			animation: zoomin 1s ease-in-out;
 		}
 
 		.Backhoe {

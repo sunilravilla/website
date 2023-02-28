@@ -8,6 +8,7 @@ import van from './van.png';
 import './FeatureGallery.scss';
 import backhoe from './backhoe.png';
 import backhoe2 from './backhoe2.png';
+import tractors from './tractors.png';
 
 const TABS = [
 	{
@@ -23,7 +24,7 @@ const TABS = [
 		title: 'Tractor',
 		description:
 			'<p>Transport goods and materials with a tractor that can pull heavy loads and equipment.</p>',
-		imageUrl: freight,
+		imageUrl: tractors,
 		baseColor: '31,143,183',
 		secondColor: '20,91,115'
 	},
