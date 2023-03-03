@@ -1,73 +1,86 @@
-// Define breakpoint variables
-$breakpoint-sm: 576px;
-$breakpoint-md: 768px;
-$breakpoint-lg: 992px;
-$breakpoint-xl: 1200px;
+// Define variables for commonly used values
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$social-icon-size: 24px;
 
-// Footer styles
+// Define styles for the footer
 .footer {
-	background-color: #333;
-	color: #fff;
-	padding: 20px;
+	background-color: #f8f9fa;
+	padding: 30px 0;
 
-	.container {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
+	ul {
+		margin: 0;
+		padding: 0;
 
-		@media (max-width: $breakpoint-md) {
-			flex-direction: column;
-			align-items: center;
-		}
+		li {
+			display: inline-block;
+			margin-right: 20px;
 
-		.col-md-6 {
-			flex: 1;
-
-			@media (max-width: $breakpoint-md) {
-				width: 100%;
-				text-align: center;
-				margin-bottom: 10px;
+			&:last-child {
+				margin-right: 0;
 			}
 
-			ul {
-				list-style: none;
-				margin: 0;
-				padding: 0;
+			a {
+				color: $secondary-color;
+				text-decoration: none;
 
-				li {
-					margin-bottom: 10px;
+				&:hover {
+					color: $primary-color;
+				}
 
-					&:last-child {
-						margin-bottom: 0;
-					}
+				// Define styles for social media icons
+				&.facebook:before {
+					content: '\f09a'; // FontAwesome icon code for Facebook
+				}
 
-					a {
-						color: #fff;
-						text-decoration: none;
+				&.twitter:before {
+					content: '\f099'; // FontAwesome icon code for Twitter
+				}
 
-						&:hover {
-							text-decoration: underline;
-						}
-					}
+				&.instagram:before {
+					content: '\f16d'; // FontAwesome icon code for Instagram
+				}
+
+				// Define common styles for all social media icons
+				&:before {
+					display: inline-block;
+					font-family: FontAwesome;
+					font-size: $social-icon-size;
+					margin-right: 5px;
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+
+	p {
+		color: $secondary-color;
+		margin: 0;
+		padding-top: 10px;
+		text-align: right;
+	}
+}
+
+// Define styles for responsiveness
+@media (max-width: 767px) {
+	.footer {
+		text-align: center;
+
+		ul {
+			margin-bottom: 20px;
+
+			li {
+				display: block;
+				margin: 0 0 10px 0;
+
+				&:last-child {
+					margin-bottom: 0;
 				}
 			}
 		}
 
-		.text-md-right {
-			text-align: right;
-			flex: 1;
-
-			@media (max-width: $breakpoint-md) {
-				width: 100%;
-				text-align: center;
-				margin-bottom: 10px;
-			}
-
-			p {
-				margin-top: 0;
-				margin-bottom: 0;
-				font-size: 14px;
-			}
+		p {
+			text-align: center;
 		}
 	}
 }

@@ -6,7 +6,7 @@ function Footer() {
 		{
 			id: 1,
 			label: 'Facebook',
-			url: 'https://www.facebook.com/gunasekharravilla'
+			url: 'https://www.facebook.com/ravilla.guna'
 		},
 		{ id: 2, label: 'Twitter', url: 'https://twitter.com/' },
 		{
@@ -24,7 +24,12 @@ function Footer() {
 							{socialLinks.map((link) => (
 								<li key={link.id} className="list-inline-item">
 									{/* open link in new tab */}
-									<a href={link.url} target="_blank" rel="noopener noreferrer">
+									<a
+										href={link.url}
+										target="_blank"
+										rel="noopener noreferrer"
+										className={link.label?.toLowerCase()}
+									>
 										{link.label}
 									</a>
 								</li>

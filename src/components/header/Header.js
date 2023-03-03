@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Header.scss';
 import logo from './Logo2.png';
 
@@ -9,9 +9,20 @@ const Header = () => {
 			behavior: 'smooth'
 		});
 	};
+	useEffect(() => {
+		const header = document.querySelector('.header');
+		window.addEventListener('scroll', () => {
+			const scrollPosition = window.scrollY;
+			if (scrollPosition) {
+				header.classList.add('shadow');
+			} else {
+				header.classList.remove('shadow');
+			}
+		});
+	}, []);
 
 	return (
-		<div className="header">
+		<div className={`header`}>
 			<div className="logodiv" title="All Wheels">
 				<img src={logo} alt="All Wheels" className="logo" />
 			</div>
