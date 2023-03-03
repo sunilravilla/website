@@ -71,7 +71,7 @@ export default function FeaturesGallery() {
 	}
 
 	return (
-		<div className="GalleryWrapper">
+		<div className="GalleryWrapper" id="features">
 			<div className="tabs-container">
 				{TABS.map(function (singleTab, idx) {
 					const isActive = singleTab.title === currentTab.title;

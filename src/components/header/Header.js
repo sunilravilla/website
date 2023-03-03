@@ -3,18 +3,13 @@ import './Header.scss';
 import logo from './Logo2.png';
 
 const Header = () => {
-	// function toggleTheme() {
-	// 	const themeSwitch = document.getElementById('theme-switch');
-	// 	const header = document.querySelector('.header');
+	const scrollToSection = (e, sectionId) => {
+		e.preventDefault();
+		document.querySelector(`#${sectionId}`).scrollIntoView({
+			behavior: 'smooth'
+		});
+	};
 
-	// 	if (themeSwitch?.checked) {
-	// 		// Set dark theme
-	// 		header.classList.add('dark');
-	// 	} else {
-	// 		// Set light theme
-	// 		header?.classList.remove('dark');
-	// 	}
-	// }
 	return (
 		<div className="header">
 			<div className="logodiv" title="All Wheels">
@@ -25,13 +20,19 @@ const Header = () => {
 				<div>
 					<ul>
 						<li>
-							<a href="home">Home</a>
+							<a href="#home" onClick={(e) => scrollToSection(e, 'home')}>
+								Home
+							</a>
 						</li>
 						<li>
-							<a href="about">About</a>
+							<a href="#about" onClick={(e) => scrollToSection(e, 'about')}>
+								About
+							</a>
 						</li>
 						<li>
-							<a href="contact">Contact Us</a>
+							<a href="#contact" onClick={(e) => scrollToSection(e, 'contact')}>
+								Contact Us
+							</a>
 						</li>
 					</ul>
 				</div>

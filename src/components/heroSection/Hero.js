@@ -3,8 +3,14 @@ import './Hero.scss';
 import heroimage from './heroimage.png';
 
 const Hero = () => {
+	const scrollToSection = (e, sectionId) => {
+		e.preventDefault();
+		document.querySelector(`#${sectionId}`).scrollIntoView({
+			behavior: 'smooth'
+		});
+	};
 	return (
-		<div className="hero-wrapper">
+		<div className="hero-wrapper" id="home">
 			<div className="contents">
 				<h2 className="custom-over-title">
 					Welcome to <span>ALL WHEELS</span>
@@ -19,7 +25,11 @@ const Hero = () => {
 					suits your project requirements.
 				</p>
 				<div className="custom-button-group">
-					<a href="#whitepaper" className="button transparent">
+					<a
+						href="features"
+						className="button transparent"
+						onClick={(e) => scrollToSection(e, 'features')}
+					>
 						Features <span>&rarr;</span>
 					</a>
 				</div>
