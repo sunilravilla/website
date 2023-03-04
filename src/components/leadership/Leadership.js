@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Leadership.scss';
 import gunasekhar from './gunasekhar.jpg';
+import sunil from './sunil45.jpg';
 
 function Leadership() {
 	const data = {
@@ -22,8 +23,7 @@ function Leadership() {
 			{
 				name: 'Sunil Ravilla',
 				position: 'Co-Founder & COO',
-				image:
-					'https://media.licdn.com/dms/image/D5635AQF-3KNxAkLpAQ/profile-framedphoto-shrink_200_200/0/1664750866483?e=1678543200&v=beta&t=jvVJc35XpSLzVwpBFYPpN03c0VpiUCnHGOiejNwr2JE',
+				image: sunil,
 				link: 'https://www.linkedin.com/in/sunil-ravilla/'
 			}
 		]
