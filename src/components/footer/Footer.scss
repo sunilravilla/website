@@ -1,87 +1,176 @@
-// Define variables for commonly used values
-$primary-color: #007bff;
-$secondary-color: #6c757d;
-$social-icon-size: 24px;
-
-// Define styles for the footer
 .footer {
-	background-color: #f8f9fa;
-	padding: 30px 0;
+	background-color: #f4f4f4;
+	padding: 50px;
 
-	ul {
-		margin: 0;
-		padding: 0;
+	.footerContainer {
+		max-width: 1200px;
+		margin: 0 auto;
 
-		li {
-			display: inline-block;
-			margin-right: 20px;
+		.footerTopContainer {
+			display: flex;
+			justify-content: space-between;
 
-			&:last-child {
-				margin-right: 0;
-			}
+			.socialContainer {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
 
-			a {
-				color: $secondary-color;
-				text-decoration: none;
+				.web {
+					display: flex;
+					align-items: center;
 
-				&:hover {
-					color: $primary-color;
+					img {
+						margin-right: 20px;
+						width: 25%;
+						height: 25%;
+					}
+
+					.social_links {
+						display: flex;
+
+						a {
+							display: inline-flex;
+							align-items: center;
+							justify-content: center;
+							width: 40px;
+							height: 40px;
+							background-color: #fff;
+							border-radius: 50%;
+							margin-right: 10px;
+							text-decoration: none;
+							color: #666;
+							font-size: 20px;
+							font-weight: 600;
+
+							img {
+								width: 20px;
+							}
+						}
+					}
 				}
 
-				// Define styles for social media icons
-				&.facebook:before {
-					content: '\f09a'; // FontAwesome icon code for Facebook
-				}
+				.routeContainer {
+					display: flex;
+					align-items: center;
+					margin-left: 20px;
+					justify-content: space-between;
+					ul {
+						list-style-type: none;
+						margin: 0;
+						padding: 0;
 
-				&.twitter:before {
-					content: '\f099'; // FontAwesome icon code for Twitter
-				}
+						li {
+							margin-bottom: 10px;
 
-				&.instagram:before {
-					content: '\f16d'; // FontAwesome icon code for Instagram
-				}
-
-				// Define common styles for all social media icons
-				&:before {
-					display: inline-block;
-					font-family: FontAwesome;
-					font-size: $social-icon-size;
-					margin-right: 5px;
-					vertical-align: middle;
+							a {
+								color: #666;
+								text-decoration: none;
+								font-weight: 600;
+								text-decoration: none;
+								font-size: 14px;
+							}
+						}
+					}
 				}
 			}
 		}
-	}
 
-	p {
-		color: $secondary-color;
-		margin: 0;
-		padding-top: 10px;
-		text-align: right;
-	}
-}
+		.divider {
+			height: 1px;
+			background-color: #666;
+			margin: 20px 0;
 
-// Define styles for responsiveness
-@media (max-width: 767px) {
-	.footer {
-		text-align: start;
-		padding-left: 10px;
-
-		ul {
-			margin-bottom: 20px;
-
-			li {
-				display: block;
-				margin: 0 0 10px 0;
-
-				&:last-child {
-					margin-bottom: 0;
-				}
+			@media screen and (max-width: 768px) {
+				display: none;
 			}
 		}
 
-		p {
-			text-align: center;
+		.footerBottomContainer {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			.desc {
+				color: #666;
+				font-size: 14px;
+				font-weight: 600;
+				margin-right: 20px;
+			}
+
+			.otherlinks {
+				ul {
+					list-style-type: none;
+					margin: 0;
+					padding: 0;
+					display: flex;
+
+					li {
+						margin-right: 10px;
+
+						&:last-child {
+							margin-right: 0;
+						}
+
+						.country-select {
+							position: relative;
+
+							.select {
+								display: flex;
+								align-items: center;
+								cursor: pointer;
+
+								.down-icon {
+									margin-left: 10px;
+									width: 20px;
+									height: 20px;
+								}
+
+								.selected {
+									margin-left: 10px;
+									color: #666;
+									font-size: 14px;
+									font-weight: 600;
+								}
+							}
+
+							.select-options {
+								position: absolute;
+								top: 30px;
+								right: 0;
+								z-index: 1;
+								background-color: #fff;
+								border: 1px solid #ccc;
+								border-radius: 4px;
+								max-height: 150px;
+								overflow-y: auto;
+								padding: 10px;
+								box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+								display: none;
+
+								&.show {
+									display: block;
+								}
+
+								li {
+									margin-bottom: 5px;
+									font-size: 14px;
+									font-weight: 600;
+									cursor: pointer;
+
+									&:last-child {
+										margin-bottom: 0;
+									}
+
+									&:hover {
+										color: #fff;
+										background-color: #666;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }
