@@ -85,6 +85,9 @@
 					.card-image {
 						transform: rotate(3deg);
 						background-color: #f5f5f5;
+						&:hover {
+							transform: rotate(0deg) translateY(-8px);
+						}
 					}
 				}
 
@@ -92,6 +95,9 @@
 					.card-image {
 						transform: rotate(-3deg);
 						background-color: #f5f5f5;
+						&:hover {
+							transform: rotate(0deg) translateY(-8px);
+						}
 					}
 				}
 
@@ -125,7 +131,7 @@
 							display: inline-block;
 							width: 0.5em;
 							height: 0.5em;
-							background-color: rgb(53, 55, 180);
+							background-color: rgb(79, 80, 172);
 							line-height: 0;
 							margin-right: 0.5rem;
 						}
