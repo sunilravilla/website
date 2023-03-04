@@ -44,21 +44,37 @@ function Footer() {
 				title: 'Services',
 				links: [
 					{
-						title: 'Service 1',
+						title: 'Tipper',
 						url: '/services/service1'
 					},
 					{
-						title: 'Service 2',
+						title: 'Trucks',
 						url: '/services/service2'
 					},
 					{
-						title: 'Service 3',
+						title: 'Backhoe Loaders',
 						url: '/services/service3'
+					},
+					{
+						title: 'Excavators',
+						url: '/services/service4'
+					},
+					{
+						title: 'Bulldozers',
+						url: '/services/service5'
+					},
+					{
+						title: 'Skid Steer Loaders',
+						url: '/services/service6'
+					},
+					{
+						title: 'Wheel Loaders',
+						url: '/services/service7'
 					}
 				]
 			}
 		],
-		copyRight: '© 2023 All rights reserved.',
+		copyRight: '© 2023 All Wheels All rights reserved.',
 		otherLinks: [
 			{
 				title: 'Privacy Policy',
@@ -77,12 +93,16 @@ function Footer() {
 	};
 
 	return (
-		<footer className="footer">
+		<footer className="footer" id="contact">
 			<div className="footerContainer" id="footerContainer">
 				<div className="footerTopContainer">
 					<div className="socialContainer">
 						<div className="web">
-							<img src={footerData.logo || ''} alt="All Wheels" />
+							<img
+								src={footerData.logo || ''}
+								alt="All Wheels"
+								title="All Wheels"
+							/>
 							<div className="social_links">
 								{footerData?.socialLinks?.map((item) => (
 									<a
@@ -98,19 +118,47 @@ function Footer() {
 								))}
 							</div>
 						</div>
-						{footerData?.routes?.map((route) => (
-							<div className="routeContainer" key={route.title}>
-								<ul>
-									{route?.links?.map((link) => (
-										<li key={link.title}>
-											<a href={link.url} className="event-elem">
-												{link.title}
-											</a>
-										</li>
-									))}
-								</ul>
-							</div>
-						))}
+						<div className="routeContainer">
+							{footerData?.routes?.map((route) => (
+								<div className="routes" key={route.title}>
+									<ul>
+										{route?.links?.map((link) => (
+											<li key={link.title}>
+												<a href={link.url} className="event-elem">
+													{link.title}
+												</a>
+											</li>
+										))}
+									</ul>
+								</div>
+							))}
+						</div>
+						{/* add addresses */}
+						<div className="address">
+							<ul>
+								<li>
+									<a href="tel:+919701531066" className="phone">
+										<i className="fa fa-phone"></i>
+										+91 9701531066
+									</a>
+								</li>
+								<li>
+									<a href="mailto:gunasekharravilla@gmail.com" className="mail">
+										<i className="fa fa-envelope"></i>
+										gunasekharravilla@gmail.com
+									</a>
+								</li>
+								<li>
+									<a
+										href="https://goo.gl/maps/4Q4Q4Q4Q4Q4Q4Q4Q4"
+										className="location"
+									>
+										<i className="fa fa-map-marker"></i>
+										1234, 5th Avenue, New York, NY 10001
+									</a>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 
@@ -127,33 +175,6 @@ function Footer() {
 									</a>
 								</li>
 							))}
-							<li className="web">
-								<div className="pull-right">
-									<div className="country-select" id="country-select">
-										<div
-											className="select"
-											onClick={() => {
-												document
-													.getElementById('country-options')
-													.classList.toggle('hide');
-											}}
-										>
-											<i className={footerData?.dropdown?.icon}></i>
-											<div className="selected">
-												{footerData?.dropdown?.title}
-											</div>
-										</div>
-										<ul
-											className="select-options country-options hide"
-											id="country-options"
-										>
-											{footerData?.dropdown?.options.map((option) => (
-												<li key={option}>{option}</li>
-											))}
-										</ul>
-									</div>
-								</div>
-							</li>
 						</ul>
 					</div>
 				</div>

@@ -43,7 +43,7 @@ function Leadership() {
 	const showButtons = data.cards.length > 5;
 
 	return (
-		<div className="Leadership">
+		<div className="Leadership" id="about">
 			<h2>{data.sectionTitle}</h2>
 			<div className="card-slider">
 				<div className="container-fluid">

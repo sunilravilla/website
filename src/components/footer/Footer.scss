@@ -3,17 +3,28 @@
 	padding: 50px;
 
 	.footerContainer {
-		max-width: 1200px;
+		max-width: 100%;
 		margin: 0 auto;
 
 		.footerTopContainer {
 			display: flex;
+			flex-direction: row;
+			align-items: center;
 			justify-content: space-between;
 
+			@media screen and (max-width: 768px) {
+				flex-direction: column;
+			}
+
 			.socialContainer {
-				display: flex;
-				align-items: center;
-				justify-content: space-between;
+				display: inline-flex;
+				flex-direction: row;
+				align-items: flex-start;
+				justify-content: space-around;
+
+				@media screen and (max-width: 768px) {
+					flex-direction: column;
+				}
 
 				.web {
 					display: flex;
@@ -23,10 +34,20 @@
 						margin-right: 20px;
 						width: 25%;
 						height: 25%;
+						@media screen and (max-width: 768px) {
+							width: 50%;
+							height: 50%;
+						}
 					}
 
 					.social_links {
 						display: flex;
+						flex-direction: row;
+						align-items: center;
+						justify-content: space-around;
+						@media screen and (max-width: 768px) {
+							flex-direction: column;
+						}
 
 						a {
 							display: inline-flex;
@@ -51,23 +72,90 @@
 
 				.routeContainer {
 					display: flex;
-					align-items: center;
+					align-items: flex-start;
 					margin-left: 20px;
-					justify-content: space-between;
+					flex-direction: row;
+					justify-content: space-around;
+					@media screen and (max-width: 768px) {
+						flex-direction: column;
+						margin-left: 0;
+					}
+					.routes {
+						display: flex;
+						flex-direction: column;
+						align-items: flex-start;
+						justify-content: space-evenly;
+						margin-left: 20px;
+						@media screen and (max-width: 768px) {
+							align-items: center;
+							margin-left: 0;
+						}
+						ul {
+							list-style-type: none;
+							margin: 0;
+							padding: 0;
+
+							li {
+								margin-bottom: 10px;
+
+								a {
+									color: #666;
+									text-decoration: none;
+									font-weight: 600;
+									text-decoration: none;
+									font-size: 14px;
+								}
+							}
+						}
+					}
+				}
+				.address {
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: space-evenly;
+					margin-left: 20px;
+
 					ul {
-						list-style-type: none;
-						margin: 0;
+						list-style: none;
 						padding: 0;
+						margin: 0;
 
 						li {
 							margin-bottom: 10px;
 
 							a {
-								color: #666;
+								color: #333;
+								display: flex;
+								align-items: center;
 								text-decoration: none;
-								font-weight: 600;
-								text-decoration: none;
-								font-size: 14px;
+								transition: color 0.3s ease;
+
+								&:hover {
+									color: #007bff;
+								}
+
+								i {
+									margin-right: 10px;
+								}
+							}
+						}
+
+						.phone {
+							i {
+								color: #28a745;
+							}
+						}
+
+						.mail {
+							i {
+								color: #007bff;
+							}
+						}
+
+						.location {
+							i {
+								color: #dc3545;
 							}
 						}
 					}
@@ -111,62 +199,12 @@
 							margin-right: 0;
 						}
 
-						.country-select {
-							position: relative;
-
-							.select {
-								display: flex;
-								align-items: center;
-								cursor: pointer;
-
-								.down-icon {
-									margin-left: 10px;
-									width: 20px;
-									height: 20px;
-								}
-
-								.selected {
-									margin-left: 10px;
-									color: #666;
-									font-size: 14px;
-									font-weight: 600;
-								}
-							}
-
-							.select-options {
-								position: absolute;
-								top: 30px;
-								right: 0;
-								z-index: 1;
-								background-color: #fff;
-								border: 1px solid #ccc;
-								border-radius: 4px;
-								max-height: 150px;
-								overflow-y: auto;
-								padding: 10px;
-								box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-								display: none;
-
-								&.show {
-									display: block;
-								}
-
-								li {
-									margin-bottom: 5px;
-									font-size: 14px;
-									font-weight: 600;
-									cursor: pointer;
-
-									&:last-child {
-										margin-bottom: 0;
-									}
-
-									&:hover {
-										color: #fff;
-										background-color: #666;
-									}
-								}
-							}
+						a {
+							color: #666;
+							text-decoration: none;
+							font-weight: 600;
+							text-decoration: none;
+							font-size: 14px;
 						}
 					}
 				}

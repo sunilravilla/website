@@ -5,6 +5,7 @@ import './styles/common.scss';
 import FeatureGallery from './components/features/FeatureGallery';
 import Footer from './components/footer/Footer';
 import Leadership from './components/leadership/Leadership';
+import FeatureCardGrid from './components/JoinUs/Join';
 
 function App() {
 	return (
@@ -12,6 +13,7 @@ function App() {
 			<Header />
 			<Hero />
 			<FeatureGallery />
+			<FeatureCardGrid />
 			<Leadership />
 			<Footer />
 		</div>
