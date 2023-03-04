@@ -125,8 +125,8 @@ $gray: #ddd;
 		}
 
 		.Backhoe {
-			animation: bounce 2s infinite alternate ease-in-out,
-				slidefromRight 2s ease-in-out;
+			animation: bounce 2s infinite alternate ease-in-out;
+			// slidefromRight 2s ease-in-out;
 		}
 
 		.Van {
@@ -134,10 +134,11 @@ $gray: #ddd;
 		}
 
 		img {
-			max-width: 100%;
+			max-width: 80%;
 			display: flex;
 			align-items: center;
 			justify-content: flex-end;
+			overflow: hidden;
 		}
 	}
 
@@ -180,7 +181,7 @@ $gray: #ddd;
 	@keyframes zoomin {
 		// zoom from left to right
 		from {
-			transform: scale(0) translateX(-100%);
+			transform: scale(0) translateX(-50%);
 		}
 		to {
 			transform: scale(1) translateX(0);
