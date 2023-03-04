@@ -64,7 +64,8 @@ $social-icon-size: 24px;
 // Define styles for responsiveness
 @media (max-width: 767px) {
 	.footer {
-		text-align: center;
+		text-align: start;
+		padding-left: 10px;
 
 		ul {
 			margin-bottom: 20px;

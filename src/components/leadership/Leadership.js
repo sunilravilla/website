@@ -1,37 +1,46 @@
 import React, { useState } from 'react';
 import './Leadership.scss';
+import gunasekhar from './gunasekhar.jpg';
 
 function Leadership() {
 	const data = {
 		sectionTitle: 'Leadership Team',
 		cards: [
 			{
-				name: 'P.R.Venketrama Raja',
-				position: 'Founder, Mentor & Innovator in Chief (Chairman)',
-				image: 'https://www.ramco.com/hubfs/PRV.jpg',
-				link: 'https://www.ramco.com/leadership/pr-venketrama-raja/'
+				name: 'Gunasekhar Ravilla',
+				position: 'Founder & CEO',
+				image: gunasekhar,
+				link: 'https://www.linkedin.com/in/gunasekharravilla/'
 			},
 			{
-				name: 'Sandesh Bilagi',
-				position: 'Chief Operating Officer',
-				image: 'https://www.ramco.com/hubfs/Sandesh-Bilagi.jpg',
-				link: 'https://www.linkedin.com/in/sandesh-bilagi-0037921/'
+				name: 'Prasanth P R',
+				position: 'Co-Founder & CTO',
+				image:
+					'https://media.licdn.com/dms/image/D5603AQGoqO5urTK6Lw/profile-displayphoto-shrink_200_200/0/1673205081498?e=1683158400&v=beta&t=7yHOdO0cd9k7kH7P6V2L4AdIeLMH3nbPPBYap5yk_Eo',
+				link: 'https://www.linkedin.com/in/prasanthpadharthi/'
+			},
+			{
+				name: 'Sunil Ravilla',
+				position: 'Co-Founder & COO',
+				image:
+					'https://media.licdn.com/dms/image/D5635AQF-3KNxAkLpAQ/profile-framedphoto-shrink_200_200/0/1664750866483?e=1678543200&v=beta&t=jvVJc35XpSLzVwpBFYPpN03c0VpiUCnHGOiejNwr2JE',
+				link: 'https://www.linkedin.com/in/sunil-ravilla/'
 			}
 		]
 	};
+
 	const [position, setPosition] = useState(0);
 
 	const handlePrev = () => {
-		if (position > 0) {
-			setPosition(position - 1);
-		}
+		debugger;
+		setPosition((prevPosition) => prevPosition - 1);
 	};
 
 	const handleNext = () => {
-		if (position < data.cards.length - 1) {
-			setPosition(position + 1);
-		}
+		setPosition((prevPosition) => prevPosition + 1);
 	};
+
+	const showButtons = data.cards.length > 5;
 
 	return (
 		<div className="Leadership">
@@ -39,37 +48,25 @@ function Leadership() {
 			<div className="card-slider">
 				<div className="container-fluid">
 					<div className="row justify-content-center">
-						<div className="slider-wrapper">
-							<div
-								className="slider"
-								style={{
-									transform: `translateX(-${
-										position * (100 / data.cards.length)
-									}%)`
-								}}
-							>
-								{data.cards.map((card, index) => (
-									<div className="col-md-6" key={index}>
-										<div className="card text-center">
-											<div className="card-image">
+						{showButtons && position !== 0 && (
+							<button className="prev-btn" onClick={handlePrev}>
+								<i className="fa fa-chevron-left" />
+							</button>
+						)}
+						<div className="col-md-12">
+							<div className="card-deck">
+								{data.cards.slice(position, position + 5).map((card, index) => (
+									<div className="card text-center" key={index}>
+										<div className="card-image">
+											<a href={card.link}>
 												<img
 													src={card.image}
 													alt={card.name}
-													className="card-img-top h-100"
-													loading="lazy"
+													className="img-fluid"
 												/>
-											</div>
+											</a>
 											<div className="card-body">
-												<h5 className="card-title">
-													<a
-														target="_blank"
-														href={card.link}
-														className="stretched-link"
-														rel="noreferrer"
-													>
-														{card.name}
-													</a>
-												</h5>
+												<h5 className="card-title">{card.name}</h5>
 												<p className="card-text">{card.position}</p>
 											</div>
 										</div>
@@ -77,17 +74,19 @@ function Leadership() {
 								))}
 							</div>
 						</div>
-						<button className="btn btn-prev" onClick={handlePrev}>
-							Prev
-						</button>
-						<button className="btn btn-next" onClick={handleNext}>
-							Next
-						</button>
+						{showButtons && (
+							<button
+								className="next-btn"
+								onClick={handleNext}
+								disabled={position === data.cards.length - 5}
+							>
+								<i className="fa fa-chevron-right" />
+							</button>
+						)}
 					</div>
 				</div>
 			</div>
 		</div>
 	);
 }
-
 export default Leadership;

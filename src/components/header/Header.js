@@ -31,17 +31,17 @@ const Header = () => {
 				<div>
 					<ul>
 						<li>
-							<a href="#home" onClick={(e) => scrollToSection(e, 'home')}>
+							<a href="home" onClick={(e) => scrollToSection(e, 'home')}>
 								Home
 							</a>
 						</li>
 						<li>
-							<a href="#about" onClick={(e) => scrollToSection(e, 'about')}>
+							<a href="about" onClick={(e) => scrollToSection(e, 'about')}>
 								About
 							</a>
 						</li>
 						<li>
-							<a href="#contact" onClick={(e) => scrollToSection(e, 'contact')}>
+							<a href="contact" onClick={(e) => scrollToSection(e, 'contact')}>
 								Contact Us
 							</a>
 						</li>
