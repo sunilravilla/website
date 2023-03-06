@@ -3,25 +3,25 @@ import './Joinus.scss';
 
 function FeatureCard({ imgSrc, imgAlt, heading, text, btnLabel, btnUrl }) {
 	return (
-		<div class="c-feature-card-spot__card">
-			<div class="c-feature-card-spot__image">
-				<div class="u-lazy">
+		<div className="c-feature-card-spot__card">
+			<div className="c-feature-card-spot__image">
+				<div className="u-lazy">
 					<img
 						data-src={imgSrc}
 						alt={imgAlt}
-						class="lazy"
+						className="lazy"
 						data-ll-status="loaded"
 						src={imgSrc}
 					/>
 				</div>
 			</div>
-			<div class="c-feature-card-spot__body">
-				<h3 class="font-maisonDemi">{heading}</h3>
-				<p class="font-maisonBook">{text}</p>
+			<div className="c-feature-card-spot__body">
+				<h3 className="font-maisonDemi">{heading}</h3>
+				<p className="font-maisonBook">{text}</p>
 				<a
 					href={btnUrl}
 					aria-label={heading}
-					class="btn"
+					className="btn"
 					data-gtm="2021_homepage_employee_join"
 				>
 					{btnLabel}

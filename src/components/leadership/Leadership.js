@@ -58,7 +58,11 @@ function Leadership() {
 								{data.cards.slice(position, position + 5).map((card, index) => (
 									<div className="card text-center" key={index}>
 										<div className="card-image">
-											<a href={card.link}>
+											<a
+												href={card.link}
+												target="_blank"
+												rel="noopener noreferrer"
+											>
 												<img
 													src={card.image}
 													alt={card.name}
