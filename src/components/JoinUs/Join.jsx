@@ -55,7 +55,7 @@ function FeatureCardGrid() {
 				'https://lelogama.go-jek.com/prime/upload/image/merchant_partner.svg',
 			imgAlt: 'Merchant',
 			heading: 'Agent partners',
-			text: "Becoming an Agent or broker for Uber can be a great way to earn extra income. As a partner, you'll receive a commission on each ride that your referred drivers complete.",
+			text: "Becoming an Agent or broker for All Wheels can be a great way to earn extra income. As a partner, you'll receive a commission on each ride that your referred drivers complete.",
 			btnLabel: 'App Coming Soon...',
 			btnUrl: './merchant'
 		}
