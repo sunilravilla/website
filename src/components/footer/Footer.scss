@@ -148,7 +148,10 @@
 
 				.address {
 					flex-grow: wrap;
-					max-width: 20%;
+					max-width: 25%;
+					@media screen and (max-width: 768px) {
+						max-width: 100%;
+					}
 					ul {
 						list-style: none;
 						padding: 0;
