@@ -9,7 +9,7 @@ function Footer() {
 			{
 				name: 'Facebook',
 				icon: 'fab fa-facebook-f',
-				link: 'https://www.facebook.com'
+				link: 'https://www.facebook.com/ravilla.guna'
 			},
 			{
 				name: 'Twitter',
@@ -19,7 +19,7 @@ function Footer() {
 			{
 				name: 'Instagram',
 				icon: 'fab fa-instagram',
-				link: 'https://www.instagram.com'
+				link: 'https://www.instagram.com/gunasekharravilla'
 			}
 		],
 		routes: [
@@ -95,70 +95,70 @@ function Footer() {
 	return (
 		<footer className="footer" id="contact">
 			<div className="footerContainer" id="footerContainer">
-				<div className="footerTopContainer">
-					<div className="socialContainer">
-						<div className="web">
-							<img
-								src={footerData.logo || ''}
-								alt="All Wheels"
-								title="All Wheels"
-							/>
-							<div className="social_links">
-								{footerData?.socialLinks?.map((item) => (
-									<a
-										href={item.link}
-										className="event-elem"
-										target="_blank"
-										key={item.name}
-										rel="noreferrer"
-									>
-										{/* fontawesome icons */}
-										<i className={item.icon}></i>
-									</a>
-								))}
-							</div>
-						</div>
-						<div className="routeContainer">
-							{footerData?.routes?.map((route) => (
-								<div className="routes" key={route.title}>
-									<ul>
-										{route?.links?.map((link) => (
-											<li key={link.title}>
-												<a href={link.url} className="event-elem">
-													{link.title}
-												</a>
-											</li>
-										))}
-									</ul>
-								</div>
+				<div className="footerTopContainer socialContainer">
+					<div className="web">
+						<img
+							src={footerData.logo || ''}
+							alt="All Wheels"
+							title="All Wheels"
+						/>
+						<div className="social_links">
+							{footerData?.socialLinks?.map((item) => (
+								<a
+									href={item.link}
+									className="event-elem"
+									target="_blank"
+									key={item.name}
+									rel="noreferrer"
+								>
+									{/* fontawesome icons */}
+									<i className={item.icon}></i>
+								</a>
 							))}
 						</div>
-						{/* add addresses */}
-						<div className="address">
-							<ul>
-								<li>
-									<a href="tel:+919701531066" className="phone">
-										<i className="fa fa-phone"></i>
-										+91 9701531066
-									</a>
-								</li>
-								<li>
-									<a href="mailto:gunasekharravilla@gmail.com" className="mail">
-										<i className="fa fa-envelope"></i>
-										gunasekharravilla@gmail.com
-									</a>
-								</li>
-								<li>
-									<a
-										href="https://goo.gl/maps/4Q4Q4Q4Q4Q4Q4Q4Q4"
-										className="location"
-									>
-										<i className="fa fa-map-marker"></i>
-										1234, 5th Avenue, New York, NY 10001
-									</a>
-								</li>
-							</ul>
-						</div>
+					</div>
+					<div className="routeContainer">
+						{footerData?.routes?.map((route) => (
+							<div className="routes" key={route.title}>
+								<ul>
+									{route?.links?.map((link) => (
+										<li key={link.title}>
+											<a href={link.url} className="event-elem">
+												{link.title}
+											</a>
+										</li>
+									))}
+								</ul>
+							</div>
+						))}
+					</div>
+					{/* add addresses */}
+					<div className="address">
+						<ul>
+							<li>
+								<a href="tel:+919701531066" className="phone">
+									<i className="fa fa-phone"></i>
+									+91 9701531066
+								</a>
+							</li>
+							<li>
+								<a href="mailto:gunasekharravilla@gmail.com" className="mail">
+									<i className="fa fa-envelope"></i>
+									gunasekharravilla@gmail.com
+								</a>
+							</li>
+							<li>
+								<a
+									href="https://goo.gl/maps/4Q4Q4Q4Q4Q4Q4Q4Q4"
+									className="location"
+								>
+									<i className="fa fa-map-marker"></i>
+									{/* some indian address */}
+									No. 1, 2nd Floor, 1st Main Road, 1st Cross Street, Kamaraj
+									Nagar, Chennai, Tamil Nadu 600032
+								</a>
+							</li>
+						</ul>
 					</div>
 				</div>
 
