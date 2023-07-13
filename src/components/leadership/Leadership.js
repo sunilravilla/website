@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Leadership.scss';
 import gunasekhar from './gunasekhar.jpg';
 import sunil from './sunil45.jpg';
+import prasanth from './prasanth.jpg';
 
 function Leadership() {
 	const data = {
@@ -16,8 +17,7 @@ function Leadership() {
 			{
 				name: 'Prasanth P R',
 				position: 'Co-Founder & CTO',
-				image:
-					'https://media.licdn.com/dms/image/D5603AQGoqO5urTK6Lw/profile-displayphoto-shrink_200_200/0/1673205081498?e=1683158400&v=beta&t=7yHOdO0cd9k7kH7P6V2L4AdIeLMH3nbPPBYap5yk_Eo',
+				image: prasanth,
 				link: 'https://www.linkedin.com/in/prasanthpadharthi/'
 			},
 			{
